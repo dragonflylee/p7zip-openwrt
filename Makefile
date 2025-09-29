@@ -9,15 +9,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=p7zip
-PKG_VERSION:=16.02
+PKG_VERSION:=17.06
 PKG_RELEASE:=1
 
-http://sourceforge.net/projects/p7zip/files/p7zip/$(PKG_VERSION)/p7zip_$(PKG_VERSION)_src_all.tar.bz2/download
-
-PKG_SOURCE:=$(PKG_NAME)_$(PKG_VERSION)_src_all.tar.bz2
-PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)_$(PKG_VERSION)
-PKG_SOURCE_URL:=@SF/$(PKG_NAME)/$(PKG_NAME)/$(PKG_VERSION)
-PKG_MD5SUM:=a0128d661cfe7cc8c121e73519c54fbf
+PKG_SOURCE:=v$(PKG_VERSION).tar.gz
+PKG_SOURCE_URL:=https://github.com/p7zip-project/p7zip/archive/
+PKG_HASH:=c35640020e8f044b425d9c18e1808ff9206dc7caf77c9720f57eb0849d714cd1
 
 include $(INCLUDE_DIR)/package.mk
 
